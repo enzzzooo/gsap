@@ -1,4 +1,5 @@
 "use client";
+// used this videonhttps://www.youtube.com/watch?v=78Ieuw_kvWI
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
