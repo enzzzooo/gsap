@@ -7,6 +7,30 @@ import ScrollTrigger from "gsap/dist/scrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HorizontalGallery() {
+  const scroller = useRef();
+  const skills = useRef();
+  useEffect(() => {
+    let skillSet = gsap.utils.toArray(".skill-set");
+
+    let to = gsap.to(skillset, {
+      xPercent: () => -100 * (skillSet.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: scroller.current,
+        markers: false,
+        pin: true,
+        pinSpacing: true,
+        scrub: 1,
+        invalidateOnRefresh: true,
+        anticipatePin: 1,
+        snap: 1 / (skillSet.length - 1),
+        end: () => "+=" + window.innerWidth,
+      },
+    });
+    return () => {
+      to.kill();
+    };
+  }, []);
   return (
     <div className="overflow-hidden flex">
       <div className="overflow-hidden">
