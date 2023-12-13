@@ -12,7 +12,7 @@ export default function HorizontalGallery() {
   useEffect(() => {
     let skillSet = gsap.utils.toArray(".skill-set");
 
-    let to = gsap.to(skillset, {
+    let to = gsap.to(skillSet, {
       xPercent: () => -100 * (skillSet.length - 1),
       ease: "none",
       scrollTrigger: {
@@ -44,7 +44,7 @@ export default function HorizontalGallery() {
           className="skill-set px-12 w-screen h-full bg-blue"
         >
           <Image
-            src="https://images.pexels.com/photos/18221948/pexels-photo-18221948/free-photo-of-beautiful-brunette-woman-in-white-off-the-shoulder-dress-standing-on-a-beach.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/19405551/pexels-photo-19405551/free-photo-of-sunset-in-olympic-national-park-wa-us.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="1st Image"
             width={1260}
             height={750}
