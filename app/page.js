@@ -3,7 +3,7 @@ export default function page() {
   return (
     <>
       <div className="">
-        <div className="w-screen h-screen bg-black flex items-center justify-center">
+        <div className="w-screen h-screen bg-black text-white text-4xl flex items-center justify-center">
           <p className="animate-bounce">Scroll down</p>
         </div>
         <HorizontalGallery />
